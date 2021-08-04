@@ -1,0 +1,123 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 150%;
+}
+
+body {
+    font-weight: 300;
+}
+
+.contenedor {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.superior {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    user-select: none;
+    -webkit-app-region: drag;
+}
+
+.titulo {
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: white;
+    cursor: move;
+}
+
+.punto {
+    cursor: pointer;
+    border-radius: 45%;
+    margin: 12px;
+    height: 0.7rem;
+    width: 0.7rem;
+    background-color: darkred;
+    -webkit-app-region: no-drag;
+}
+
+.copiar, .cierre {
+    color: transparent;
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.5s;
+}
+
+.copiar::hover, .cierre::hover {
+    color: white;
+}
+
+.cierre {
+    transform: rotate(45deg);
+}
+
+.tecla {
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+    border: 1px solid rgb(230, 230, 230);
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.5rem;
+    display: flex;
+    user-select: none;
+    box-shadow: inset 2px 2px rgba(255, 255, 255, 0.3);
+    transition: all 0.30s;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.tecla:hover {
+    background-color: rgb(220, 220, 220);
+    border: 1px solid rgb(220, 220, 220);
+}
+
+.tecla:active {
+    background-color: rgb(205, 205, 205);
+    box-shadow: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgb(205, 205, 205);
+}
+
+.pantalla {
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    background-color: #BCCFC7;
+    display: flex;
+    min-height: 5.5rem;
+}
+
+.pantalla p {
+    margin: 0px;
+    margin-right: 1rem;
+    padding: 0px;
+}
+
+#calculadora {
+    background-color: #DDD;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.teclas {
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    flex: 1;
+    padding: 15px;
+}
