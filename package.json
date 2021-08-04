@@ -1,0 +1,29 @@
+{
+  "name": "calculadora",
+  "version": "1.0.0",
+  "description": "Calculadora multiplataforma",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelgimenez85/calculadora-multiplataforma.git"
+  },
+  "keywords": [
+    "calculadora",
+    "escritorio",
+    "multiplataforma"
+  ],
+  "author": "Angel Gimenez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angelgimenez85/calculadora-multiplataforma/issues"
+  },
+  "homepage": "https://github.com/angelgimenez85/calculadora-multiplataforma#readme",
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-builder": "^22.11.7"
+  }
+}
