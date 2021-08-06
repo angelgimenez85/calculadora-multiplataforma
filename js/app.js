@@ -3,7 +3,7 @@ const { ipcRenderer, clipboard } = require('electron');
 const teclas = document.querySelectorAll('#calculadora span');
 let pantalla = document.querySelector('.pantalla p');
 
-const operadores = ['+', '-', '*', '/'];
+const operadores = ['+', '-', '×', '÷'];
 const operables = [...operadores, ...['.', '=']];
 
 let puntoPresionado = false;
@@ -33,6 +33,7 @@ function presionTecla(e, tecla) {
         }
 
         if (ecuacion) {
+            ecuacion = ecuacion.replace('÷', '/').replace('×', '*')
             pantalla.textContent = eval(ecuacion);
         }
 

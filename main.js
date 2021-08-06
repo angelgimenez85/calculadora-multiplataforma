@@ -6,7 +6,7 @@ let ventanaPrincipal;
 
 app.on('ready', () => {
     ventanaPrincipal = new BrowserWindow({
-        width: 350,
+        width: 300,
         height: 450,
         resizable: false,
         title: 'Calculadora',
