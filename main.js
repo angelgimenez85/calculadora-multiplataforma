@@ -10,6 +10,7 @@ app.on('ready', () => {
         height: 450,
         resizable: false,
         title: 'Calculadora',
+        icon: __dirname + '/img/32x32.png',
         transparent: true,
         frame: true,
         webPreferences: {
