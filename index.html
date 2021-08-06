@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'"> -->
     <title>Calculadora</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="contenedor">
         <div class="superior">
-            <div class="punto cierre" style="background-color: crimson;">x</div>
+            <div class="punto cierre" id="cerrar" title="cerrar">x</div>
             <p class="titulo">Calculadora</p>
-            <div class="punto copiar" title="copiar" style="background-color: dimgray;">+</div>
+            <div class="punto copiar" id="copiar" title="copiar">+</div>
         </div>
         <div class="contenido">
             <div id="calculadora">
@@ -43,5 +44,7 @@
             </div>
         </div>
     </div>
+
+    <script src="js/app.js"></script>
 </body>
 </html>

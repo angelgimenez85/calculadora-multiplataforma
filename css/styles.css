@@ -14,7 +14,7 @@ body {
 
 .contenedor {
     overflow: hidden;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 .superior {
@@ -53,12 +53,17 @@ body {
     transition: color 0.5s;
 }
 
+.copiar {
+    background-color: dimgray;
+}
+
 .copiar::hover, .cierre::hover {
     color: white;
 }
 
 .cierre {
     transform: rotate(45deg);
+    background-color: crimson;
 }
 
 .tecla {

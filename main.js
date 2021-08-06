@@ -1,5 +1,4 @@
 const electron = require('electron');
-const path = require('path');
 const { app, BrowserWindow, Menu, ipcMain, MenuItem } = electron;
 
 
@@ -8,13 +7,15 @@ let ventanaPrincipal;
 app.on('ready', () => {
     ventanaPrincipal = new BrowserWindow({
         width: 350,
-        height: 500,
+        height: 450,
         resizable: false,
         title: 'Calculadora',
         transparent: true,
-        frame: false,
+        frame: true,
         webPreferences: {
-            nodeIntegration: true
+            nodeIntegration: true,
+            contextIsolation: false,
+            enableRemoteModule: true
         }
     });
 
@@ -67,4 +68,8 @@ app.on('browser-window-created', (ev, ventana) => {
 ipcMain.on('show-context-menu', (e) => {
     const ventana = BrowserWindow.fromWebContents(e.sender);
     menuPrincipal.popup(ventana);
+});
+
+ipcMain.on('finalizar-aplicacion', () => {
+    app.exit();
 });
